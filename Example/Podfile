@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'JXPageControl_Example' do
+  pod 'JXPageControl', :path => '../'
+end

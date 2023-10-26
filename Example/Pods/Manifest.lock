@@ -1,0 +1,24 @@
+PODS:
+  - JXPageControl (0.1.5):
+    - JXPageControl/Common (= 0.1.5)
+    - JXPageControl/Jump (= 0.1.5)
+    - JXPageControl/Transform (= 0.1.5)
+  - JXPageControl/Common (0.1.5)
+  - JXPageControl/Jump (0.1.5):
+    - JXPageControl/Common
+  - JXPageControl/Transform (0.1.5):
+    - JXPageControl/Common
+
+DEPENDENCIES:
+  - JXPageControl (from `../`)
+
+EXTERNAL SOURCES:
+  JXPageControl:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JXPageControl: e9487b39e2e58fc17790833214f3b8e935bef98b
+
+PODFILE CHECKSUM: fe75018273d3f91d83be98cbb7f354c35d3b9731
+
+COCOAPODS: 1.12.1
