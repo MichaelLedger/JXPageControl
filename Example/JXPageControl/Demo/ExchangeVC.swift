@@ -33,10 +33,10 @@ class ExchangeVC: UIViewController {
         toEllipe.activeColor = .brown
         toCircle.activeColor = .cyan
         
-        toEllipe.numberOfPages = 4//fixed
-        toEllipe.columnSpacing = 8
-        toEllipe.inactiveSize = CGSize(width: 10, height: 8)
-        toEllipe.activeSize = CGSize(width: 40, height: 8)
+        toEllipe.numberOfPages = 4 //Main.storyboard is uneditable, please open in source code mode
+        toEllipe.columnSpacing = 16
+        toEllipe.inactiveSize = CGSize(width: 16, height: 8)
+        toEllipe.activeSize = CGSize(width: 56, height: 8)
     }
     
     deinit {
@@ -46,10 +46,8 @@ class ExchangeVC: UIViewController {
 
 extension ExchangeVC: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let progress = scrollView.contentOffset.x / scrollView.bounds.width
-        let currentPage = Int(round(progress))
-        
-        // 方式一
+        let progress = scrollView.contentOffset.x * 1.0 / scrollView.bounds.width
+        // 方式一 渐变动画效果（更丝滑）
         `default`.progress = progress
         inactivehollow.progress = progress
         activehollow.progress = progress
@@ -57,18 +55,13 @@ extension ExchangeVC: UIScrollViewDelegate {
         toEllipe.progress = progress
         toCircle.progress = progress
         
-        
-        // 方式二
+        // 方式二 无渐变动画
+//        let currentPage = Int(round(progress))
 //        `default`.currentPage = currentPage
 //        inactivehollow.currentPage = currentPage
 //        activehollow.currentPage = currentPage
 //        allHollow.currentPage = currentPage
 //        toEllipe.currentPage = currentPage
 //        toCircle.currentPage = currentPage
-        
-        
     }
-    
 }
-
-

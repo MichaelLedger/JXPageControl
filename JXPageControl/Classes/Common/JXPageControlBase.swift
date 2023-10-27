@@ -163,6 +163,8 @@ import UIKit
     
     var minIndicatorSize: CGSize = CGSize(width: 2, height: 2)
     
+    var totalSize: CGSize = CGSize(width: 2, height: 2)
+    
     var inactiveLayer: [CALayer] = []
     
     var activeLayer: CALayer?
@@ -178,6 +180,7 @@ import UIKit
     
     func reloadLayout() {
         layoutContentView()
+        recaluculateAllLayerFrames()
         layoutInactiveIndicators()
         layoutActiveIndicator()
     }
@@ -251,8 +254,17 @@ import UIKit
         // Content Size and frame
         var x: CGFloat = 0
         var y: CGFloat = 0
-        let width = CGFloat(numberOfPages) * (itemWidth + columnSpacing) - columnSpacing
+        //let width = CGFloat(numberOfPages) * (itemWidth + columnSpacing) - columnSpacing
+        var width: CGFloat = 0
+        if numberOfPages <= 1 {
+            width = max(activeSize.width, kMinItemWidth)
+        } else {
+            let activeW = max(activeSize.width, kMinItemWidth)
+            let inactiveW = max(inactiveSize.width, kMinItemWidth)
+            width = CGFloat(numberOfPages - 1) * (inactiveW + columnSpacing) + activeW
+        }
         let height = itemHeight
+        totalSize = CGSize(width: width, height: height)
         
         // Horizon layout
         switch contentAlignment.horizon {
@@ -283,4 +295,8 @@ import UIKit
     func layoutActiveIndicator() {}
     
     func layoutInactiveIndicators() {}
+    
+    func recaluculateAllLayerFrames() {}
+    
+    func recaluculateAllLayerFrames(progress: CGFloat) {}
 }
