@@ -39,10 +39,15 @@ end
 
 ### The UI effect 
 
-JXPageControlChameleon          |   JXPageControlExchange     |        JXPageControlFill 
-:-: | :-: | :-:   
-<img src="Images/chamelon.gif" width="144" height="88"> | <img src="Images/exchange_new.gif" width="260" height="124"> | <img src="Images/fill.gif" width="128" height="104">
+JXPageControlExchange
+:-: |
+<img src="Images/exchange_new.gif" width="300" height="650">
 
+&nbsp;
+
+JXPageControlChameleon     |        JXPageControlFill 
+:-: | :-: | :-:   
+<img src="Images/chamelon.gif" width="144" height="88"> | <img src="Images/fill.gif" width="128" height="104">
 
 &nbsp;
 
