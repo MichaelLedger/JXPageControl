@@ -40,13 +40,13 @@ end
 ### The UI effect 
 
 JXPageControlExchange
-:-: |
+:-:
 <img src="Images/exchange_new.gif" width="300" height="650">
 
 &nbsp;
 
 JXPageControlChameleon     |        JXPageControlFill 
-:-: | :-: | :-:   
+:-: | :-:   
 <img src="Images/chamelon.gif" width="144" height="88"> | <img src="Images/fill.gif" width="128" height="104">
 
 &nbsp;
